@@ -1,5 +1,5 @@
 function hapusSimbol(str) {
-    // e("[^a-zA-Z0-9]+")
+    
     let finalStr = '';
     let newStr = str.match(/[a-z0-9]+/gi);
 

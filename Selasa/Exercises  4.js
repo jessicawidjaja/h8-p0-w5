@@ -1,26 +1,26 @@
 function graduates (students) {
-    // VARIABLE INITIALIZATION
+   
     let listClass = [];
     let school = {};
 
-    // CREATING LIST OF CLASSES FROM INPUT
-    for (let i=0; i<students.length; i++) { // get list of class
+    
+    for (let i=0; i<students.length; i++) { 
         let studentClass = students[i].class;
         if (listClass.includes(studentClass)) {
-            // do nothing
+            
         } else {
             listClass.push(studentClass);
         }
     }
 
-    // CREATE OBJECT CLASSES
+    
     for (let j=0; j<listClass.length; j++) {
 
         let schoolKey = listClass[j];
         school[schoolKey] = [];
     }
 
-    //SEPARATING STUDENT INTO EACH OBJECT OF CLASSES
+    
     for (let key in school) {
         for (let k=0; k<students.length; k++) {
             let studentClass = students[k].class;
@@ -33,7 +33,7 @@ function graduates (students) {
         }
     }
 
-    // DELETING KEY CLASS FROM OBJECT school (as output expected)
+    
     for (let key in school) {
         for (let l=0; l<school[key].length; l++) {
             delete school[key][l].class;

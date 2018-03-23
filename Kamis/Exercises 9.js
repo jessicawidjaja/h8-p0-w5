@@ -12,23 +12,21 @@ function cariPelaku(str) {
 
     let count = 0;
     for (let j=0; j<finalStr.length; j++) {
-        // console.log('j ---- > '+finalStr[j]);
+     
         if (finalStr[j] === 'a') {
             for (let k=j+1; k<finalStr.length; k++) {
-              // console.log('k -- > '+finalStr[k]);
-                if (finalStr[k] === 'b') {
-                    for (let l=k+1; l<finalStr.length; l++) {
-                        // console.log('l - > '+finalStr[l]);
-                        if (finalStr[l] === 'c') {
-                            count += 1;
-                            break;
-                        }
-                    }
-                    break;
-                }
-            }
-        }
-    }
+        if (finalStr[k] === 'b') {
+            for (let l=k+1; l<finalStr.length; l++) {
+        if (finalStr[l] === 'c') {
+              count += 1;
+        break;
+ }
+  }
+   break;
+  }
+ }
+  }
+}
 
     return count;
 }
